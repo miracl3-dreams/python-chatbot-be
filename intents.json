@@ -1,0 +1,122 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "about_me",
+      "patterns": [
+        "Who are you?",
+        "Tell me about yourself",
+        "Introduce yourself",
+        "What do you do?",
+        "Can you introduce yourself?",
+        "Who is Danielle?",
+        "What do you study?"
+      ],
+      "responses": [
+        "I am Danielle Lunas, a passionate fourth-year BS Information Technology student at Quezon City University and a freelance web developer."
+      ]
+    },
+    {
+      "tag": "contact_info",
+      "patterns": [
+        "What is your email?",
+        "How can I contact you?",
+        "Give me your phone number"
+      ],
+      "responses": [
+        "You can reach me at lunas.danielle.10262002@gmail.com or call (+63) 956 316 9864."
+      ]
+    },
+    {
+      "tag": "education",
+      "patterns": [
+        "Where did you study?",
+        "Tell me about your education",
+        "What school do you go to?",
+        "Where have you studied?",
+        "What is your educational background?"
+      ],
+      "responses": [
+        "He is currently a fourth-year BS Information Technology student at Quezon City University. I completed senior high school and junior high school at Batasan Hills National High School."
+      ]
+    },
+    {
+      "tag": "skills",
+      "patterns": [
+        "What are your skills?",
+        "What do you know?",
+        "Tell me your skills and knowledge",
+        "What skills do you have?"
+      ],
+      "responses": [
+        "Danielle have skills in back-end development, fundamentals of Laravel PHP, SQL querying, and computer technician work. I also have strong problem-solving skills."
+      ]
+    },
+    {
+      "tag": "work_experience",
+      "patterns": [
+        "What is the work experience of Danielle?",
+        "Have you worked anywhere?",
+        "Tell me about your job experience",
+        "Where have you worked?",
+        "Do you have any job experience?",
+        "Tell me about your past jobs"
+      ],
+      "responses": [
+        "He worked as a tutor for the DSWD Tara Basa Tutoring Program."
+      ]
+    },
+    {
+      "tag": "no_answer",
+      "patterns": ["", " ", "I don't know", "Sorry", "What?"],
+      "responses": [
+        "Sorry, I didn't understand that. Can you try asking differently?"
+      ]
+    },
+    {
+      "tag": "bot_name",
+      "patterns": [
+        "What is the name of this chatbot?",
+        "What is your name?",
+        "Who are you?",
+        "Can you introduce yourself?",
+        "Tell me your name",
+        "What do they call you?"
+      ],
+      "responses": [
+        "Thank you for that question! The name of the bot is Miracle. It was named by my creator Danielle Ledesma Lunas.",
+        "Miracle was designed in 2025 and I am capable of answering questions about Danielle's background, skills, and more!"
+      ]
+    }
+  ]
+}

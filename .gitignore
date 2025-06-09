@@ -1,0 +1,19 @@
+# Ignore Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs and local environment
+*.log
+.env
+*.sqlite3
+
+# VS Code / IDE settings
+.vscode/
+.idea/
