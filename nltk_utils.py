@@ -2,12 +2,6 @@ import numpy as np
 import nltk
 from nltk.stem.porter import PorterStemmer
 
-# Ensure punkt tokenizer is available
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt")
-
 stemmer = PorterStemmer()
 
 def tokenize(sentence):

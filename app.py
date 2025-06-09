@@ -2,6 +2,13 @@ from flask import Flask, request, jsonify
 from chat import get_response
 from flask_cors import CORS
 import os
+import nltk
+
+# ✅ NLTK punkt check
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
 
 app = Flask(__name__)
 CORS(app, origins=["https://lunas-portfolio.vercel.app"])
