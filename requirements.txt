@@ -3,4 +3,4 @@ flask-cors
 nltk
 torch
 numpy
-gunicorn
+waitress
