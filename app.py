@@ -4,8 +4,6 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-
-# Allow your frontend domain
 CORS(app, origins=["https://lunas-portfolio.vercel.app"])
 
 @app.route('/chat', methods=['POST'])
@@ -19,11 +17,6 @@ def chat():
     response = get_response(message)
     return jsonify({"response": response})
 
-
 if __name__ == "__main__":
-    # Use waitress in production if available, otherwise fallback to Flask
-    if os.environ.get("FLASK_ENV") == "production":
-        from waitress import serve
-        serve(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-    else:
-        app.run(debug=True, port=5000)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
