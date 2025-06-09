@@ -17,6 +17,10 @@ def chat():
     response = get_response(message)
     return jsonify({"response": response})
 
+@app.route("/health")
+def health():
+    return "OK"
+
 if __name__ == "__main__":
     from waitress import serve
     serve(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
