@@ -36,14 +36,23 @@ def handle_options():
 # Route: Chat API
 @app.route('/chat', methods=['POST'])
 def chat():
-    data = request.get_json()
-    message = data.get('message')
+    try:
+        data = request.get_json()
+        message = data.get('message')
+        print("Received message:", message)
 
-    if not message:
-        return jsonify({"response": "Please send a message."})
+        if not message:
+            return jsonify({"response": "Please send a message."})
 
-    response = get_response(message)
-    return jsonify({"response": response})
+        response = get_response(message)
+        print("Generated response:", response)
+
+        return jsonify({"response": response})
+
+    except Exception as e:
+        print("Error in /chat route:", str(e))
+        return jsonify({"response": "Internal server error."}), 500
+
 
 # Route: Health check
 @app.route("/health")
