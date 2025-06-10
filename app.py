@@ -1,18 +1,8 @@
 from flask import Flask, request, jsonify
 from chat import get_response
 from flask_cors import CORS
-import nltk
 import os
 
-# Setup NLTK data path
-NLTK_PATH = os.path.join(os.path.dirname(__file__), "nltk_data")
-os.makedirs(NLTK_PATH, exist_ok=True)
-nltk.data.path.append(NLTK_PATH)
-
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt', download_dir=NLTK_PATH)
 
 # Initialize Flask
 app = Flask(__name__)
