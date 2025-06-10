@@ -1,14 +1,19 @@
 from flask import Flask, request, jsonify
 from chat import get_response
 from flask_cors import CORS
-import os
 import nltk
+import os   
+
+
+NLTK_PATH = os.path.join(os.path.dirname(__file__), "nltk_data")
+os.makedirs(NLTK_PATH, exist_ok=True)  
+nltk.data.path.append(NLTK_PATH)
+
 
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt')
-
+    nltk.download('punkt', download_dir=NLTK_PATH)
 
 app = Flask(__name__)
 CORS(app, origins=["https://lunas-portfolio.vercel.app"])
