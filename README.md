@@ -1,4 +1,4 @@
-# Chatbot Deployment with Flask and JavaScript
+# Chatbot Deployment with Flask 
 
 In this tutorial we deploy the chatbot I created in [this](https://github.com/miracl3-dreams/python-chatbot-be) tutorial with Flask and JavaScript.
 
